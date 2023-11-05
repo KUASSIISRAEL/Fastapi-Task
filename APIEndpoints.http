@@ -1,0 +1,42 @@
+GET http://127.0.0.1:8000/api/v1/ HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/tasks/ HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/tasks/2/ HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://127.0.0.1:8000/api/v1/tasks/ HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Create scheduler task",
+    "slug": "scheduler-task-1",
+    "status": "PENDING",
+    "priority": 1,
+    "description": "Create scheduler task with celery",
+    "exec_date": "2023-01-01T11:23:00"
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/tasks/ HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Create scheduler task",
+    "slug": "scheduler-task-2",
+    "status": "PENDING",
+    "priority": 1,
+    "description": "Create scheduler task with celery",
+    "exec_date": "2023-01-01T11:23:00"
+}
